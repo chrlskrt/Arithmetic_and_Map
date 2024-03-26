@@ -1,8 +1,8 @@
 package Arithmetic;
 
 public class Arithmetic <Number1 extends Number, Number2 extends Number> {
-    Number1 num1;
-    Number2 num2;
+    Number num1;
+    Number num2;
     public Arithmetic(Number1 num1, Number2 num2){
         this.num1 = num1;
         this.num2 = num2;
@@ -28,20 +28,20 @@ public class Arithmetic <Number1 extends Number, Number2 extends Number> {
         return num1.doubleValue() / num2.doubleValue();
     }
 
-    public <N extends Number> N getMin(){
+    public Number getMin(){
         if (num1.doubleValue() < num2.doubleValue()){
-            return (N) num1;
+            return num1;
         }
 
-        return (N) num2;
+        return num2;
     }
 
-    public <N extends Number> N getMax(){
+    public Number getMax(){
         if (num1.doubleValue() > num2.doubleValue()){
-            return (N) num1;
+            return num1;
         }
 
-        return (N) num2;
+        return num2;
     }
 
     /* USING WILDCARD as return type */
