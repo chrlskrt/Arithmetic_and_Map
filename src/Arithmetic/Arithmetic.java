@@ -1,26 +1,26 @@
 package Arithmetic;
 
 public class Arithmetic <Number1 extends Number, Number2 extends Number> {
-    Number num1;
-    Number num2;
+    Number1 num1;
+    Number2 num2;
     public Arithmetic(Number1 num1, Number2 num2){
         this.num1 = num1;
         this.num2 = num2;
     }
 
-    public double add(){
+    public Number add(){
         return num1.doubleValue() + num2.doubleValue();
     }
 
-    public double subtract(){
+    public Number subtract(){
         return num1.doubleValue() - num2.doubleValue();
     }
 
-    public double multiply(){
+    public Number multiply(){
         return num1.doubleValue() * num2.doubleValue();
     }
 
-    public double divide(){
+    public Number divide(){
         if (num2.doubleValue() == 0){
             throw new ArithmeticException("Cannot divide by 0.");
         }
