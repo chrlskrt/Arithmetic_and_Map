@@ -43,9 +43,16 @@ public class MyMap<Obj1, Obj2> {
         return null;
     }
 
-    public void print(){
+    /* For checking purposes */
+
+    @Override
+    public String toString() {
+        StringBuilder myMap = new StringBuilder("\nMAP CONTENTS: \n");
+
         for (int i = 0; i < keys.size(); i++){
-            System.out.println(keys.get(i) + " : " + values.get(i));
+            myMap.append(keys.get(i)).append(" : ").append(values.get(i)).append("\n");
         }
+
+        return myMap.toString();
     }
 }
